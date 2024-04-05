@@ -21,8 +21,14 @@ client.on('auth_failure', msg => {
     console.error('AUTHENTICATION FAILURE', msg);
 });
 
-client.on('ready', () => {
+client.on('ready', async () => {
     console.log('Client is ready!');
+    try {
+        const state = await client.getState();
+        console.log('Current state:', state);
+    } catch (error) {
+        console.error('Error fetching state:', error);
+    }
     sendInitialMessage();
 });
 
