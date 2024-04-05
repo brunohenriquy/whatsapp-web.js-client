@@ -1,0 +1,4 @@
+services:
+  whatsapp-web-client:
+    container_name: whatsapp-web-client
+    build: .
