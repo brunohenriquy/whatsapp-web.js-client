@@ -1,6 +1,6 @@
 services:
-  whatsapp-web-client:
-    container_name: whatsapp-web-client
+  whatsapp_web_client:
+    container_name: whatsapp_web_client
     build: .
     volumes:
       - ./sessions:/usr/src/app/sessions
